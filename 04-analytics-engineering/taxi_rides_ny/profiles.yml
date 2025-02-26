@@ -1,0 +1,23 @@
+pg-dbt-workshop:
+  target: dev
+  outputs: 
+    dev: 
+      type: postgres
+      host: localhost
+      user: my_user
+      password: my_password
+      port: 5432
+      dbname: production
+      schema: dbt_victoria_mola
+      threads: 4
+      keepalives_idle: 0 # default 0, indicating the system default
+bg-de-zoomcamp:
+  target: dev
+  outputs: 
+    dev: 
+      type: bigquery
+      method: service-account
+      project: taxi-rides-ny
+      dataset: dbt_victoria_mola
+      threads: 4
+      keyfile: my_key_file.json
