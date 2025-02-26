@@ -4,13 +4,26 @@ pg-dbt-workshop:
     dev: 
       type: postgres
       host: localhost
-      user: my_user
-      password: my_password
+      user: kestra
+      password: k3str4
       port: 5432
-      dbname: production
-      schema: dbt_victoria_mola
+      dbname: postgres-zoomcamp
+      schema: public
       threads: 4
       keepalives_idle: 0 # default 0, indicating the system default
+# pg-dbt-workshop:
+#   target: dev
+#   outputs: 
+#     dev: 
+#       type: postgres
+#       host: localhost
+#       user: my_user
+#       password: my_password
+#       port: 5432
+#       dbname: production
+#       schema: dbt_victoria_mola
+#       threads: 4
+#       keepalives_idle: 0 # default 0, indicating the system default
 bg-de-zoomcamp:
   target: dev
   outputs: 
