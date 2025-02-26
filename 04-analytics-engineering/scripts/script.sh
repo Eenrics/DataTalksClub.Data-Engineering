@@ -5,3 +5,5 @@ alias env_dbt='source /Users/mac/data-engineering/DataTalksClub.Data-Engineering
 
  dbt init
  dbt debug
+ dbt build
+ dbt deps
